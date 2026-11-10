@@ -1,0 +1,44 @@
+rr<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f6fb">
+  <title>Quick Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="quiz-card">
+    <header class="quiz-header">
+      <p class="eyebrow">A LITTLE BRAIN BREAK</p>
+      <h1>Quick Quiz</h1>
+      <p class="intro">Test your general knowledge, one question at a time.</p>
+    </header>
+
+    <section id="quiz" aria-live="polite">
+      <div class="quiz-meta">
+        <span id="question-count">Question 1 of 5</span>
+        <span id="score">Score: 0</span>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <h2 id="question">Loading question...</h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback" role="status"></p>
+      <button id="next-button" class="primary-button" type="button" disabled>
+        Check answer
+      </button>
+    </section>
+
+    <section id="results" class="results" hidden aria-live="polite">
+      <div class="result-icon" aria-hidden="true">🎉</div>
+      <h2>Quiz complete!</h2>
+      <p id="final-score"></p>
+      <button id="restart-button" class="primary-button" type="button">Play again</button>
+    </section>
+  </main>
+</body>
+</html>
